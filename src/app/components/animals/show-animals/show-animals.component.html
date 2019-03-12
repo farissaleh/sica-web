@@ -1,0 +1,25 @@
+<div class="container">
+<h1>Animals</h1>
+
+<ul>
+  <li *ngFor="let a of animals">
+      <h3>{{ a.tag }}</h3>
+      <ul>
+        <li>{{ a.name }}</li>
+        <li>{{ a.specie }}</li>
+        <li>{{a.data.weight.value}} {{a.data.weight.unit}}</li>
+        <li>{{a.data.birthdate}}</li>
+ 
+        <h4>Colores</h4>
+        <li *ngFor="let c of a.data.colors">
+            
+            <ul >{{ c }}
+                
+           </ul>
+         </li> 
+        <br>
+       
+      </ul>
+  </li>
+</ul>
+</div>

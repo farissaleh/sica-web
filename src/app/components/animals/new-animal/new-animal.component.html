@@ -1,0 +1,48 @@
+
+
+
+<div class="container">
+<form [formGroup]="fg" (ngSubmit)="onSubmit()">
+  <div>
+    <h3>New Animal</h3>
+  <label>
+    Name:
+    <input type="text" formControlName="name" >
+  </label>
+  </div>
+  <div>
+  <label>
+    Specie:
+    <input type="text" formControlName="specie">
+  </label>
+  </div>
+  <div>
+      <label>Weigth :</label>
+      <br>
+      <label>
+          Value:
+        <input type="text" formControlName="weigthValue">
+      </label>
+      <label>
+          Unit:
+        <input type="text" formControlName="weigthUnit">
+      </label>
+  </div>
+  <div>
+      
+   </div>
+
+   <div>
+      <label>
+          BirthDate:
+        <input type="text" formControlName="birthdate">
+      </label>
+   </div>
+
+   <button type="submit" [disabled]="!fg.valid">Submit</button>
+
+</form>
+</div>
+
+
+  
