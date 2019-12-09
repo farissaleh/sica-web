@@ -33,9 +33,9 @@ export class AnimalService {
     return this.animalsObservable;
   }
 
-  addAnimal(animal : Animal){
+  addAnimal(params : any){
     this.initAnimals();
-      this.animals.push(animal);
+      this.animals.push(params);
       this.logAnimals();
   }
 

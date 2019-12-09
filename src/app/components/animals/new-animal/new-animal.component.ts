@@ -14,8 +14,9 @@ import { Weight } from 'src/app/models/weight';
 export class NewAnimalComponent implements OnInit {
   animal : Animal = new Animal();
   fg = new FormGroup({
-    name : new FormControl(''),
-    specie : new FormControl(''),
+    tag : new FormControl('',Validators.required),
+    name : new FormControl('',Validators.required),    
+    specie : new FormControl('',Validators.required),
     weigthValue : new FormControl(''),
     weigthUnit : new FormControl(''),
    birthdate : new FormControl(''),
@@ -30,17 +31,21 @@ export class NewAnimalComponent implements OnInit {
   }
 
   onSubmit() {
-    this.animal.name = this.fg.controls.name.value;
+    // let param : any;
+    // param.name = this.fg.controls.name;
+   
+    // param.data.weight.unit = this.fg.controls.weigthUnit.value;
+    // param.data.birthdate = this.fg.controls.birthdate.value;
+  /*   this.animal.name = this.fg.controls.name.value;
     this.animal.specie = this.fg.controls.specie.value;
     this.animal.data = new Data();
     this.animal.data.weight = new Weight();
     this.animal.data.weight.unit = this.fg.controls.weigthUnit.value;
     this.animal.data.weight.value = this.fg.controls.weigthValue.value;
-    this.animal.data.birthdate = this.fg.controls.birthdate.value;
-    
-    console.warn( this.animal);
+    this.animal.data.birthdate = this.fg.controls.birthdate.value;*/
+
      
-    this.service.addAnimal(this.animal);
+    // this.service.addAnimal(this.fg.value);
   }
 
   updateName() {

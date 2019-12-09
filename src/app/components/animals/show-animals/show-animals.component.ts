@@ -10,7 +10,7 @@ import {Animal} from '../../../models/animal';
 })
 export class ShowAnimalsComponent implements OnInit {
 
-  animals : Array<Animal>;
+  animals : any;
 
   constructor(private service : AnimalService) { }
 
